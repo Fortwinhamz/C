@@ -1,0 +1,119 @@
+@import 'config';
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Poppins:wght@200;400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-size:62.5%;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+}
+
+header{
+    padding: 1% 2%;
+    background-color: $starslight-green;
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        p{
+            display: inline-block;
+            align-items: center;
+            font-family: 'Combo', cursive;
+            font-size: 4rem;
+            color: $primary-color;
+            font-weight: 900;
+            
+        }
+
+        .nav-menu{
+            display: flex;
+            align-items: center;
+            .nav-link{
+                padding: 0 2rem;
+                color: $color-black;
+                font-weight: 500;
+            }
+        }
+
+        .my-account{
+            justify-content: center;
+            display: flex;
+            .fa-solid{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $color-white;
+                margin: 0 1rem;
+                padding: 0 auto;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $primary-color ;
+            }
+        }
+
+        .hamburger{
+            display: none;
+            cursor: pointer;
+
+            .bar{
+                display: block;
+                width: 24px;
+                height: 3px;
+                background-color: $primary-color;
+                margin: .4rem auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+    .navbar{
+        width: 100%;
+
+        .nav-menu{
+            flex-direction: column;
+            position: fixed;
+            left: -100%;
+            top: 5rem;
+            width: 100%;
+            background-color: $starslight-green;
+            border-radius: 2rem;
+            transition: 0.3s;
+
+            &.active{
+                left: 0;
+            }
+        }
+
+
+        .nav-item{
+            margin: 2rem 0;
+        }
+
+        .hamburger{
+            display: block !important;
+            cursor: pointer;
+
+
+            &.active{
+                .bar:nth-child(2){
+                    opacity: 0;
+                }
+
+                .bar:nth-child(1){
+                    transform: translateY(-8px) rotate(45deg);
+                }
+
+                .bar:nth-child(3){
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+        }
+    }
+}

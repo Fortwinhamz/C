@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Poppins:wght@200;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+}
+
+header {
+  padding: 1% 2%;
+  background-color: #E0FFDB;
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header .navbar p {
+  display: inline-block;
+  align-items: center;
+  font-family: "Combo", cursive;
+  font-size: 4rem;
+  color: #068C52;
+  font-weight: 900;
+}
+header .navbar .nav-menu {
+  display: flex;
+  align-items: center;
+}
+header .navbar .nav-menu .nav-link {
+  padding: 0 2rem;
+  color: #000000;
+  font-weight: 500;
+}
+header .navbar .my-account {
+  justify-content: center;
+  display: flex;
+}
+header .navbar .my-account .fa-solid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin: 0 1rem;
+  padding: 0 auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #068C52;
+}
+header .navbar .hamburger {
+  display: none;
+  cursor: pointer;
+}
+header .navbar .hamburger .bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #068C52;
+  margin: 0.4rem auto;
+  transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+  .navbar .nav-menu {
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    width: 100%;
+    background-color: #E0FFDB;
+    border-radius: 2rem;
+    transition: 0.3s;
+  }
+  .navbar .nav-menu.active {
+    left: 0;
+  }
+  .navbar .nav-item {
+    margin: 2rem 0;
+  }
+  .navbar .hamburger {
+    display: block !important;
+    cursor: pointer;
+  }
+  .navbar .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar .hamburger.active .bar:nth-child(1) {
+    transform: translateY(-8px) rotate(45deg);
+  }
+  .navbar .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}/*# sourceMappingURL=style.css.map */
