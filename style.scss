@@ -35,6 +35,18 @@ header{
                 padding: 0 2rem;
                 color: $color-black;
                 font-weight: 500;
+
+                &:hover:after{
+                    content: '';
+                    background: red;
+                    left: 0;
+                    top: 100%;
+                    position: absolute;
+                    margin: 10px auto;
+                // width:50%;
+                // height:6px;
+                // background:#00f;
+                }
             }
         }
 

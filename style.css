@@ -35,6 +35,14 @@ header .navbar .nav-menu .nav-link {
   color: #000000;
   font-weight: 500;
 }
+header .navbar .nav-menu .nav-link:hover:after {
+  content: "";
+  background: red;
+  left: 0;
+  top: 100%;
+  position: absolute;
+  margin: 10px auto;
+}
 header .navbar .my-account {
   justify-content: center;
   display: flex;
